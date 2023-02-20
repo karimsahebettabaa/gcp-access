@@ -34,3 +34,7 @@ jobs:
 
     - name: 'Use gcloud CLI'
       run: 'gcloud info'
+      
+    - name: 'Get Project Info'
+      run: 'gcloud projects list'
+      
