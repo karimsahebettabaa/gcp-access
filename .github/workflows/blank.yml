@@ -38,6 +38,9 @@ jobs:
     - name: 'Get Project Info'
       run: 'gcloud projects list'
       
-    - name: 'Create bucket'
-      run: 'gsutil mb -l europe-west1 gs://github-access-123'
+    - name: 'Create secret'
+      run: 'gcloud secrets create my-secret'
+      
+    - name: 'List secrets'
+      run: 'gcloud secrets list'
       
