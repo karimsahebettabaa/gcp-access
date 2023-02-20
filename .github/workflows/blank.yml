@@ -53,7 +53,7 @@ jobs:
         arr=()
         for i in "$(gcloud secrets list)"
         do
-          if [[ $i == *"sercret"* ]]; then
+          if [[ $i == *"secret"* ]]; then
             echo "Yes"
           fi
         done
