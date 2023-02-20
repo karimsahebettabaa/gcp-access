@@ -39,7 +39,7 @@ jobs:
       run: 'gcloud projects list'
       
     - name: 'Create secret'
-      run: 'gcloud secrets create my-secret'
+      run: 'gcloud secrets create my-secret123'
       
     - name: 'List secrets'
       run: 'gcloud secrets list'
