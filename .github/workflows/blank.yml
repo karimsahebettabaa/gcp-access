@@ -39,5 +39,5 @@ jobs:
       run: 'gcloud projects list'
       
     - name: 'Create bucket'
-      run: 'gsutil mb -l eu-west1 gs://github-access-123'
+      run: 'gsutil mb -l europe-west1 gs://github-access-123'
       
