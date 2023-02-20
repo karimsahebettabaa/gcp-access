@@ -38,12 +38,34 @@ jobs:
     - name: 'Get Project Info'
       run: 'gcloud projects list'
       
-    - name: 'Create secret'
-      run: 'echo "secret123" > /tmp/file_secret'
+   #- name: 'Create secret'
+   #  run: 'echo "secret123" > /tmp/file_secret'
     
-    - name: 'Create secret'
-      run: 'gcloud secrets create my-secret456 --data-file=/tmp/file_secret '
+   #- name: 'Create secret'
+   #  run: 'gcloud secrets create my-secret456 --data-file=/tmp/file_secret '
       
     - name: 'List secrets'
       run: 'gcloud secrets list'
+  # Array
+    - name: 'Array'
+      id: arr
+      run: |
+        arr=()
+        for i in "$(gcloud secrets list)"
+        do
+          if [[ $i == *"sercret"* ]]; then
+            echo "Yes"
+          fi
+        done
+        echo ::set-output name=arr::${arr[@]}
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
       
