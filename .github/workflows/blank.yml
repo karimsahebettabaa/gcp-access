@@ -42,7 +42,7 @@ jobs:
       run: 'echo "secret123" > /tmp/file_secret'
     
     - name: 'Create secret'
-      run: 'gcloud secrets create my-secret456 --datafile=/tmp/file_secret '
+      run: 'gcloud secrets create my-secret456 --data-file=/tmp/file_secret '
       
     - name: 'List secrets'
       run: 'gcloud secrets list'
